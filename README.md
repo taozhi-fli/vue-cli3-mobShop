@@ -1,5 +1,6 @@
 # vuecli3test
-
+git remote add origin git@github.com:taozhi-fli/mmmm.git
+git push -u origin master
 ## Project setup
 ```
 npm install

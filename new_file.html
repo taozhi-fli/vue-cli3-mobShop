@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function addall(str){
+			let arr=[].slice.call(arguments)
+			console.log(arr)
+			function adda(){
+				arr.push(...arguments)
+				return adda
+			};
+			adda.toString=function(){
+				console.log(arr)
+				return arr.reduce((a,b)=>a+b)
+			}
+			return adda
+		}
+		console.log(addall(1,2,3)(4,5)(5))
+		
+		function a(){
+			function b (){
+				console.log('bbbbbbbbbbb')
+			}
+			console.log('aaaaaaa')
+			return b()
+		}
+		a()
+	</script>
+</body>
+</html>
